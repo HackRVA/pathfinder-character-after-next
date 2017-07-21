@@ -1,5 +1,19 @@
-cmake_minimum_required(VERSION 3.8)
+cmake_minimum_required(VERSION 3.5)
 project(pathfinder-character-after-next-core)
 
-include(include)
+include_directories(include)
+
+add_library(pcan_core
+    src/AbstractModifiable/get.cxx
+
+    src/AbstractModifier/modify.cxx
+    src/AbstractModifier/priority.cxx
+
+    src/LinearModifier/constructor.cxx
+    src/LinearModifier/modify.cxx
+
+    src/StaticModifier/constructor.cxx
+    src/StaticModifier/modify.cxx
+    src/StaticModifier/priority.cxx
+    )
 
