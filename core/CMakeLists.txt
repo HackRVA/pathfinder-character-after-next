@@ -15,5 +15,9 @@ add_library(pcan_core
     src/StaticModifier/constructor.cxx
     src/StaticModifier/modify.cxx
     src/StaticModifier/priority.cxx
+    
+    src/Connector/Connector.cxx
+    src/Connector/process.cxx 
+    
     )
 
