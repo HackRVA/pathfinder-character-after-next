@@ -1,0 +1,69 @@
+Are these things always true?  If not when aren't they?  Are they true 90% of the time?  Can we use a flag mask to identify when these aren't going to follow their normal patter?
+
+AC() {
+    return 10 + ArmorBonusMod + AbilityMod_Dexterity;
+}
+
+Touch() {
+    return 10 + AbilityMod_Dexterity;
+}
+
+Flatfooted() {  
+    return 10 + ArmorBonusMod;
+}
+
+Fortitude() {   
+    return ClassSaveMod_Fortitude + AbilityMod_Constitution;
+}
+
+Reflex() {  
+    return ClassSaveMod_Reflex + AbilityMod_Dexterity;
+}
+
+Will() {
+    return ClassSaveMod_Will + AbilityMod_Wisdom;
+}
+
+Strength() {    
+    return 10 + BoughtMod_Strength;
+}
+
+Dexterity() {
+    return 10 + BoughtMod_Dexterity;
+}
+
+Constitution() {    
+    return 10 + BoughtMod_Constitution + RaceMod_Constitution;
+}
+
+Intelligence() {
+    return 10 + BoughtMod_Intelligence;
+}
+
+Wisdom() {
+    return 10 + BoughtMod_Wisdom + RaceMod_Wisdom;
+}
+
+Charisma() {
+    return 10 + BoughtMod_Charisma + RaceMod_Charisma;
+}
+
+
+BaseAttack() {
+    return baseAtk;
+}
+
+CMB() {
+    return baseAtk + AbilityMod_Strength;
+}
+
+CMD() {
+    return 10 + AbilityMod_Strength + AbilityMod_Dexterity + baseAtk;
+}
+
+**********************************************************
+struct _melee Melee(&GreatSword) { //so many questions here
+    struct _melee melee; 
+    melee.first = GreatSword.twoHanded();
+    melee.second = GreatSword.power();
+}
